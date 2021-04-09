@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  font-family: "Robot", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
+  height: 40px;
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: unset;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 10px 0 rgba(0, 0, 0, 0.9);
+}
+.location .fas {
+  padding-right: 15px;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  font-size: clamp(0.75rem, 0.6605rem + 0.4970vw, 1rem);
+  font-weight: 500;
+  color: unset;
+  padding-top: 20px;
+}
+
+.description.more_about {
+  font-size: 15px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  padding-bottom: 40px;
+}
+.btn .explore {
+  height: 50px;
+  width: 200px;
+  border: 0px;
+  border-radius: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #ffffff;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+.btn .explore btn :active {
+  background-color: lighten 10%;
+}
+
+.steps h2 {
+  padding: 20px 0px 10px 20px;
+}
+.steps .step {
+  border-radius: 20px;
+  box-shadow: 18px 20px 29px -26px rgba(0, 0, 0, 0.84);
+  height: 60px;
+  width: 300px;
+  margin: 15px auto;
+  position: relative;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  color: unset;
+  background-color: #f6f6f6;
+}
+.steps .step .number {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  padding: 6px;
+  position: absolute;
+  left: -12px;
+}
+.steps .step .fas {
+  color: #9356DC;
+  padding: 0px 15px 0px 15px;
+}
+.steps .step.active {
+  background-color: #f5edff;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+@import "./Utils/variables";
+@import "./Utils/mixin";
+@import "./Utils/resets.scss";
+body{
+    width: 100%;
+    margin: 0;
+}
+.logo{
+   @include center(100%, flex, center);
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.location{
+    @include center(100%, flex, center);
+    background-color: #eaeaea;
+    height: 40px;
+    padding-top: 10px;
+    @include font(15px, 300, unset);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 10px 0 rgba(0, 0, 0, 0.9);
+    & .fas{
+        padding-right: 15px;
+    }
+}
+.description {
+    @include center(100%, flex, center);
+    background-color: #f6f6f6;
+    @include font(clamp(0.75rem, 0.6605rem + 0.4970vw, 1rem), 500, unset);
+    padding-top: 20px;
+}
+.description.more_about{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+.btn{
+    @include center(100%, flex, center);
+    background-color: #f6f6f6;
+    padding-bottom: 40px;
+    
+    & .explore{
+        @include button;
+        @include font(14px, 700, white);
+    }
+}
+    .steps{
+        & h2{
+            padding: 20px 0px 10px 20px;
+        }
+        & .step{
+            @include step;
+            @include font(15px, 700, unset);
+            background-color: #f6f6f6;
+            & .number{
+                @include number;
+            }
+            & .fas {
+                @include icon (0px 15px 0px 15px);
+            }
+        }
+        & .step.active{
+            background-color: #f5edff;
+        }
+    }
