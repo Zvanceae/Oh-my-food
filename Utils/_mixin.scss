@@ -50,6 +50,7 @@
 @mixin restaurant{
     width: 90%;
     min-width: 200px;
+    max-width: 350px;
     min-height: 180px;
     max-height: 220px;
     background-color: white;
