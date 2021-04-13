@@ -139,6 +139,10 @@ body {
 .restaurants .restaurant .picture figcaption {
   padding-left: 10px;
 }
+.restaurants .restaurant .picture figcaption a {
+  color: black;
+  text-decoration: none;
+}
 
 footer {
   background-color: #353535;

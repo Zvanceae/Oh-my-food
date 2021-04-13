@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  font-family: "Robot", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.logo .fas {
+  text-decoration: none;
+  color: black;
+}
+
+.cover {
+  min-height: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: unset;
+  justify-content: center;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 50%;
+  min-width: 100%;
+  background: url("../Img/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.menu {
+  position: relative;
+  z-index: 2;
+  top: -100px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+.menu .title {
+  height: 80px;
+  background-color: #f6f6f6;
+  width: 100%;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  font-family: "Shrikhand", sans-serif;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  color: unset;
+}
+
+.recipes {
+  min-height: fit-content;
+  max-width: inherit;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.recipes .recipes_container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 280px;
+  max-height: 500px;
+  margin: 10px;
+}
+.recipes .recipes_container .container_title {
+  font-size: 15px;
+  font-weight: 400;
+  color: unset;
+  padding: 20px;
+  height: 70px;
+  margin: 0 auto;
+}
+.recipes .recipes_container .container_title::after {
+  content: "";
+  display: block;
+  border-top: 3px solid #99E2D0;
+  width: 40px;
+  margin-top: 3px;
+}
+.recipes .recipes_container .recipe_card {
+  background-color: #ffff;
+  display: flex;
+  min-width: 320px;
+  max-width: 400px;
+  height: 60px;
+  border-radius: 15px;
+  box-shadow: 4px 5px 14px -4px rgba(0, 0, 0, 0.21);
+  margin: 0px auto 10px auto;
+}
+
+.recipe_card .recipe_card_text {
+  background-color: #ffff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.recipe_card .recipe_card_text .title_recipe {
+  padding: 10px 0px 0px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: unset;
+  margin: auto;
+}
+.recipe_card .recipe_card_text .subtitle_recipe {
+  padding-left: 10px;
+  font-size: 13px;
+}
+.recipe_card .recipe_card_price {
+  margin-left: auto;
+  padding: 25px 10px 0px 0px;
+}
+.recipe_card .recipe_card_check {
+  display: none;
+}
+
+.btn {
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 120px;
+  padding: 30px 0px 30px 0px;
+  text-align: center;
+}
+.btn .btn_order {
+  height: 50px;
+  width: 200px;
+  border: 0px;
+  border-radius: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #ffffff;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+}
+.btn .btn_order btn :active {
+  background-color: lighten 10%;
+}
+
+footer {
+  background-color: #353535;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  padding: 15px 30px 20px;
+}
+footer .footer_title {
+  font-size: 20px;
+  font-family: "Shrikhand";
+  color: white;
+}
+footer .footer_list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+footer .footer_list li {
+  margin-top: 10px;
+}
+footer .footer_list li .fas {
+  padding-right: 10px;
+}
+footer .footer_list li .fas.fa-hands-helping {
+  font-size: 10px;
+}
+footer .footer_list li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=Bastillestyle.css.map */

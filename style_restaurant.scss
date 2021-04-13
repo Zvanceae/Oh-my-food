@@ -1,0 +1,118 @@
+@import "./Utils/variables";
+@import "./Utils/mixin";
+@import "Utils/resets.scss";
+body{
+    width: 100%;
+    margin: 0;
+}
+.logo{
+   @include center(100%, flex, center);
+   margin-top: 20px;
+   margin-bottom: 20px;
+    & .fas{
+        text-decoration: none;
+        color: black;
+    }
+}
+.cover {
+    @include cover;
+}
+.cover::after{
+    @include cover_after;
+}
+.menu{
+    @include menu;
+    .title{
+        @include menu_title;
+        @include font(25px, 700, unset);
+        
+    }
+}
+
+    // The container that holds the 3 parts of menu
+.recipes {
+    @include recipes;
+    //Container with all tree all tree types of food
+    & .recipes_container{
+        @include recipes_container;
+        // Title of the container (ex. entree)
+        & .container_title{
+            @include font(15px, 400, unset);
+            padding: 20px;
+            height: 70px;
+            margin: 0 auto;
+            }
+         & .container_title::after{
+            content: "";
+            display: block;
+            border-top: 3px solid $tertiary;
+            width: 40px;
+            margin-top: 3px;
+            }
+    // The card with the food, price and check btn
+        & .recipe_card {
+            @include recipe_card;
+            }
+        }
+    }
+.recipe_card {
+    & .recipe_card_text{
+        background-color: #ffff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        & .title_recipe{
+        padding: 10px 0px 0px 10px;
+        @include font(15px, 600, unset);
+        margin: auto;
+        }
+        & .subtitle_recipe{
+            padding-left: 10px;
+            font-size: 13px;
+        }
+    }
+    & .recipe_card_price{
+        margin-left: auto;
+        padding: 25px 10px 0px 0px;
+    }
+    & .recipe_card_check{
+        display: none;
+        }
+    }
+
+.btn{
+    width: 100%;
+    background-color: #f6f6f6;
+    height: 120px;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+    & .btn_order{
+    @include button;
+    }
+}
+footer{
+    background-color: #353535;
+    @include font(14px, 400, white);
+    padding: 15px 30px 20px;
+     & .footer_title {
+         font-size: 20px;
+         font-family: 'Shrikhand';
+         color: white;
+     }
+     & .footer_list{
+         list-style-type: none;
+         padding-left: 0px;
+         & li{
+             margin-top: 10px;
+             & .fas {
+                padding-right:10px;
+             }
+             & .fas.fa-hands-helping{
+                 font-size: 10px;
+             }
+             & a{
+                 color: #ffffff;
+                 text-decoration: none;
+             }
+         }
+     }
+}
