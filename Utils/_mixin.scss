@@ -60,6 +60,18 @@
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    position: relative;
+}
+@mixin new_lable{
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    color: #018463;
+    background-color: $tertiary;
+    width: 55px;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
 }
 @mixin cover{
     min-height: 400px;
@@ -121,4 +133,33 @@
     border-radius: 15px;
     box-shadow: 4px 5px 14px -4px rgba(0,0,0,0.21);
     margin: 0px auto 10px auto;
+}
+@mixin input {
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    position: relative;
+    outline: none; 
+    transform: rotate(45deg);
+    webkit-appearance: none;
+}
+@mixin input_before{
+    position: absolute;
+    content: "";
+    background-color: #ffffff;
+    height: 60%;
+    width: 100%;
+    top: -59%;
+    border-radius: 75px 75px 0 0;
+}
+@mixin input_after{
+    position:absolute;
+    content: "";
+    background-color: #ffffff;
+    height: 60%;
+    width: 100%;
+    transform: rotate(-90deg);
+    border-radius: 75px 75px 0 0;
+    top: 20%;
+    right: 79%;
 }

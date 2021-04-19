@@ -6,6 +6,7 @@
 body {
   width: 100%;
   margin: 0;
+  background-color: #f6f6f6;
 }
 
 .logo {
@@ -14,6 +15,11 @@ body {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.logo .back {
+  position: absolute;
+  left: 19px;
+  top: 27px;
 }
 .logo .fas {
   text-decoration: none;
@@ -103,6 +109,26 @@ body {
   margin: 0px auto 10px auto;
 }
 
+.recipes_container :nth-child(2) {
+  animation: showslow 1000ms ease-in;
+}
+.recipes_container :nth-child(3) {
+  animation: showslow 1000ms 200ms ease-in;
+}
+.recipes_container :nth-child(4) {
+  animation: showslow 1000ms 400ms ease-in;
+}
+
+@keyframes showslow {
+  from {
+    opacity: 0%;
+    margin-bottom: 40px;
+  }
+  to {
+    opacity: 100%;
+    margin-bottom: 0px;
+  }
+}
 .recipe_card .recipe_card_text {
   background-color: #ffff;
   border-top-left-radius: 20px;
@@ -124,14 +150,45 @@ body {
   padding: 25px 10px 0px 0px;
 }
 .recipe_card .recipe_card_check {
+  width: 0px;
+  position: relative;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: 0.6s ease-in;
+}
+.recipe_card .recipe_card_check .fas {
   display: none;
+  transition: 0.6s ease-out 0.3s;
 }
 
+.recipe_card:hover .recipe_card_check {
+  display: inline-block;
+  width: 60px;
+  background-color: #99E2D0;
+}
+.recipe_card:hover .recipe_card_check .fas {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #ffffff;
+  font-size: 25px;
+  animation: rotate 0.6s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .btn {
   width: 100%;
   background-color: #f6f6f6;
-  height: 120px;
-  padding: 30px 0px 30px 0px;
+  height: 80px;
+  padding-top: 30px;
   text-align: center;
 }
 .btn .btn_order {
