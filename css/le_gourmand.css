@@ -41,7 +41,7 @@ body {
   z-index: -1;
   height: 50%;
   min-width: 100%;
-  background: url("../Img/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background: url("../Img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -152,7 +152,7 @@ input:checked[type=checkbox]:after {
   display: flex;
   min-width: 320px;
   max-width: 400px;
-  height: 60px;
+  height: 65px;
   border-radius: 15px;
   box-shadow: 4px 5px 14px -4px rgba(0, 0, 0, 0.21);
   margin: 0px auto 10px auto;
@@ -283,4 +283,4 @@ footer .footer_list li a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=Bastillestyle.css.map */
+/*# sourceMappingURL=le_gourmand.css.map */

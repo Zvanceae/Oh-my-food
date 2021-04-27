@@ -72,6 +72,9 @@ body {
   background-color: lighten 10%;
 }
 
+.steps {
+  padding-bottom: 40px;
+}
 .steps h2 {
   padding: 20px 0px 10px 20px;
 }
@@ -110,13 +113,17 @@ body {
 }
 
 .section_title {
-  padding-left: 20px;
+  height: 80px;
+  padding: 15px 0px 0px 20px;
+  background-color: #f6f6f6;
 }
 
 .restaurants {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 40px;
+  background-color: #f6f6f6;
 }
 
 .restaurant {
@@ -164,41 +171,52 @@ body {
 }
 
 input[type=checkbox] {
-  height: 35px;
-  width: 35px;
-  background-color: #ffffff;
+  height: 15px;
+  width: 15px;
+  background-color: white;
   position: relative;
   outline: none;
   transform: rotate(45deg);
-  webkit-appearance: none;
+  -webkit-appearance: none;
+  top: -15px;
+  left: 280px;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
 }
 
 input[type=checkbox]:before {
   position: absolute;
   content: "";
-  background-color: #ffffff;
+  background-color: white;
   height: 60%;
   width: 100%;
   top: -59%;
+  left: -1px;
   border-radius: 75px 75px 0 0;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  border-top: solid 1px black;
 }
 
 input[type=checkbox]:after {
   position: absolute;
   content: "";
-  background-color: #ffffff;
+  background-color: white;
   height: 60%;
   width: 100%;
   transform: rotate(-90deg);
   border-radius: 75px 75px 0 0;
-  top: 20%;
-  right: 79%;
+  top: 17%;
+  right: 75%;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
 }
 
 input[type=checkbox]:checked,
 input:checked[type=checkbox]:before,
 input:checked[type=checkbox]:after {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-color: red;
 }
 
 footer {

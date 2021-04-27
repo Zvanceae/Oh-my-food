@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch style.scss:./css/style.css",
-    "sassBastille": "sass --watch style_restaurant.scss:./css/Bastillestyle.css"
+    "sassBastille": "sass --watch style_restaurant.scss:./css/Bastillestyle.css",
+    "sassthe_enchanted": "sass --watch the_enchanted.scss:./css/the_enchantedstyle.css",
+    "sassthe_full_platte": "sass --watch the_full_platte.scss:./css/the_full_platte.css",
+    "sassle_gourmand": "sass --watch le_gourmand.scss:./css/le_gourmand.css"
   },
   "author": "",
   "license": "ISC"
