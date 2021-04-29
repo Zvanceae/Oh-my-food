@@ -5,6 +5,35 @@ body{
     width: 100%;
     margin: 0;
 }
+.loading{
+    @include loading;
+}
+.loading_animation{
+    @include loading_animation;
+    .subload {
+        @include subload;
+        .subload2{
+            height: 110px;
+            width: 110px;
+            border-top: groove 6px $tertiary;
+            border-bottom: groove 6px $tertiary;
+            border-radius: 50%;
+            animation: loading_animation 3000ms infinite;
+        }
+    }
+}
+@keyframes loading{
+    0% {
+         opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes loading_animation{
+   to{ transform: rotate(1turn);
+   }
+}
 .logo{
    @include center(100%, flex, center);
    margin-top: 20px;
@@ -97,50 +126,24 @@ body{
             }
         }
     }
+    // Heart checkbox
     input[type="checkbox"]{
-            height: 15px;
-            width: 15px;
-            background-color: white;
-            position: relative;
-            outline: none;
-            transform: rotate(45deg);
-            -webkit-appearance: none;
-            top: -15px;
-            left: 280px;
-            border-bottom: solid 1px black;
-            border-right: solid 1px black;
+            @include input;
         }
         input[type="checkbox"]:before{
-            position: absolute;
-            content: "";
-            background-color: white;
-            height: 60%;
-            width: 100%;
-            top: -59%;
-            left: -1px;
-            border-radius: 75px 75px 0 0;
-            border-left: solid 1px black;
-            border-right: solid 1px black;
-            border-top: solid 1px black;
+           @include input_before;
         }
         input[type="checkbox"]:after{
-            position: absolute;
-            content: "";
-            background-color: white;
-            height: 60%;
-            width: 100%;
-            transform: rotate(-90deg);
-            border-radius: 75px 75px 0 0;
-            top: 17%;
-            right: 75%;
-            border-top: solid 1px black;
-            border-left: solid 1px black;
-            border-right: solid 1px black;
+            @include input_after;
         }
-        input[type="checkbox"]:checked,
-        input:checked[type="checkbox"]:before,
+        input[type="checkbox"]:checked{
+            background: linear-gradient( to left top, $secondary ,$primary 95%);
+        }
+        input:checked[type="checkbox"]:before{
+            background: linear-gradient( to right bottom, $primary 60%,$secondary);
+        }
         input:checked[type="checkbox"]:after{
-            background-color: red;
+            background: linear-gradient( to left bottom, $primary 60%,$secondary);
         }
         
     footer{

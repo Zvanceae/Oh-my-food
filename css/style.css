@@ -8,6 +8,66 @@ body {
   margin: 0;
 }
 
+.loading {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0%;
+  animation: loading 3000ms 1;
+}
+
+.loading_animation {
+  height: 170px;
+  width: 170px;
+  border-top: groove 6px #9356DC;
+  border-bottom: groove 6px #9356DC;
+  border-radius: 50%;
+  animation: loading_animation 3000ms infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading_animation .subload {
+  width: 140px;
+  height: 140px;
+  border-left: groove 6px #FF79DA;
+  border-right: groove 6px #FF79DA;
+  border-radius: 50%;
+  animation: loading_animation 3000ms infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading_animation .subload .subload2 {
+  height: 110px;
+  width: 110px;
+  border-top: groove 6px #99E2D0;
+  border-bottom: groove 6px #99E2D0;
+  border-radius: 50%;
+  animation: loading_animation 3000ms infinite;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes loading_animation {
+  to {
+    transform: rotate(1turn);
+  }
+}
 .logo {
   width: 100%;
   display: flex;
@@ -213,10 +273,16 @@ input[type=checkbox]:after {
   border-right: solid 1px black;
 }
 
-input[type=checkbox]:checked,
-input:checked[type=checkbox]:before,
+input[type=checkbox]:checked {
+  background: linear-gradient(to left top, #FF79DA, #9356DC 95%);
+}
+
+input:checked[type=checkbox]:before {
+  background: linear-gradient(to right bottom, #9356DC 60%, #FF79DA);
+}
+
 input:checked[type=checkbox]:after {
-  background-color: red;
+  background: linear-gradient(to left bottom, #9356DC 60%, #FF79DA);
 }
 
 footer {

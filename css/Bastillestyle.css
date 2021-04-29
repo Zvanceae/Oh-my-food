@@ -74,8 +74,8 @@ input[type=checkbox] {
   outline: none;
   transform: rotate(45deg);
   -webkit-appearance: none;
-  top: -30px;
-  left: 290px;
+  top: -15px;
+  left: 280px;
   border-bottom: solid 1px black;
   border-right: solid 1px black;
 }
@@ -109,10 +109,16 @@ input[type=checkbox]:after {
   border-right: solid 1px black;
 }
 
-input[type=checkbox]:checked,
-input:checked[type=checkbox]:before,
+input[type=checkbox]:checked {
+  background: linear-gradient(to left top, #FF79DA, #9356DC 95%);
+}
+
+input:checked[type=checkbox]:before {
+  background: linear-gradient(to right bottom, #9356DC 60%, #FF79DA);
+}
+
 input:checked[type=checkbox]:after {
-  background-color: red;
+  background: linear-gradient(to left bottom, #9356DC 60%, #FF79DA);
 }
 
 .recipes {
@@ -152,7 +158,7 @@ input:checked[type=checkbox]:after {
   display: flex;
   min-width: 320px;
   max-width: 400px;
-  height: 60px;
+  height: 65px;
   border-radius: 15px;
   box-shadow: 4px 5px 14px -4px rgba(0, 0, 0, 0.21);
   margin: 0px auto 10px auto;

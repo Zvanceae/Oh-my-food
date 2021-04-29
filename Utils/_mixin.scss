@@ -3,6 +3,43 @@
     display: $flex;
     justify-content: $center;
 }
+@mixin loading{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0%;
+    animation: loading 3000ms 1;
+}
+@mixin loading_animation{
+    height: 170px;
+    width: 170px;
+    border-top: groove 6px $primary;
+    border-bottom: groove 6px $primary;
+    border-radius: 50%;
+    animation: loading_animation 3000ms infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin subload {
+    width: 140px;
+        height: 140px;
+        border-left: groove 6px $secondary;
+        border-right: groove 6px $secondary;
+        border-radius: 50%;
+        animation: loading_animation 3000ms infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
 @mixin button {
     height: 50px;
     width: 200px;
@@ -135,31 +172,42 @@
     margin: 0px auto 10px auto;
 }
 @mixin input {
-    height: 35px;
-    width: 35px;
-    background-color: #ffffff;
-    position: relative;
-    outline: none; 
-    transform: rotate(45deg);
-    webkit-appearance: none;
+    height: 15px;
+            width: 15px;
+            background-color: white;
+            position: relative;
+            outline: none;
+            transform: rotate(45deg);
+            -webkit-appearance: none;
+            top: -30px;
+            left: 285px;
+            border-bottom: solid 1px black;
+            border-right: solid 1px black;
 }
 @mixin input_before{
     position: absolute;
     content: "";
-    background-color: #ffffff;
+    background-color: white;
     height: 60%;
     width: 100%;
     top: -59%;
+    left: -1px;
     border-radius: 75px 75px 0 0;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-top: solid 1px black;
 }
 @mixin input_after{
-    position:absolute;
+    position: absolute;
     content: "";
-    background-color: #ffffff;
+    background-color: white;
     height: 60%;
     width: 100%;
     transform: rotate(-90deg);
     border-radius: 75px 75px 0 0;
-    top: 20%;
-    right: 79%;
+    top: 17%;
+    right: 75%;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
 }
