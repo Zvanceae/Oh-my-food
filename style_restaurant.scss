@@ -41,7 +41,7 @@ input[type="checkbox"]:before{
     @include input_before;
 }
 input[type="checkbox"]:after{
-    @include input_after
+    @include input_after;
 }
 input[type="checkbox"]:checked{
     background: linear-gradient( to left top, $secondary ,$primary 95%);
